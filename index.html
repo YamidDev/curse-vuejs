@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
+
 <body>
   <div class="container">
     <!-- <div id="app" class="mt-5">
@@ -19,20 +21,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-xs-12">
-            <h1>Agregar Nota</h1>
-            <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" v-model="nombre">
-            <label for="promedio">Promedio</label>
-            <input type="number" max="5" min="0" v-model="promedio" class="form-control">
-            <input type="button" @click="agregarNota" value="Guardar" class="btn btn-success my-3">
+            <div class="form-group">
+              <h1>Agregar Nota</h1>
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" v-model="nombre">
+              <label for="promedio">Promedio</label>
+              <input type="number" max="5" min="0" v-model="promedio" class="form-control">
+            </div>
+            <input type="button" @click="agregarNota" value="Guardar" class="btn btn-success">
           </div>
           <div class="col-md-6 col-xs-12">
             <h1 v-if="lista.length>0">Lista de notas</h1>
             <h1 v-else="lista">No existen notas</h1>
             <table class="table">
               <tr>
-                <th>nombre</th>
-                <th>promedio</th>
+                <th>Nombre</th>
+                <th>Promedio</th>
               </tr>
               <tr v-for="item in lista" v-bind:style="item.estado==false?'color:red':''">
                 <td v-text="item.nombre"></td>
@@ -44,7 +48,11 @@
         <div class="row">
           <div class="col-md-12 col-xs-12">
             <p class="text-center">
-              <a href="https://github.com/YamidDev/curse-vuejs" target="_blank">https://github.com/YamidDev/curse-vuejs - Repositorio oficial</a>
+              <a href="https://github.com/YamidDev/curse-vuejs" target="_blank">https://github.com/YamidDev/curse-vuejs
+                - <code>
+                Repositorio oficial
+              </code>
+              </a>
             </p>
           </div>
         </div>
@@ -52,6 +60,7 @@
     </div>
   </div>
 </body>
-  <script src="js/vue.js"></script>
-  <script src="js/main.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/main.js"></script>
+
 </html>
